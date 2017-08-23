@@ -1,9 +1,11 @@
 package com.shark.mybatisboot;
 
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 
+@MapperScan("com.shark.mybatisboot.dao.mapper")
 @ServletComponentScan
 @SpringBootApplication
 public class BootApplication {
