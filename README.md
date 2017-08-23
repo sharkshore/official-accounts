@@ -2,7 +2,7 @@
 ###搭建一个mybatis,mysql,druid,slf4j的起始项目,支持不同环境
 
 1. 能启动访问接口  ok
-2. 配置druid  ok,一半
+2. 配置druid  ok
 3. 配置mysql   ok
 4. 配置mybatis  ok
 5. 配置slf4j  ok
@@ -12,6 +12,7 @@
 9. 支持API接口文档自动生成  ok
 10. 支持单元测试  ok,一半
 11. 支持日志级别,日志输出 ok
+12. druid监控 ok
 
 
 ### 日志输出内容元素具体如下：
@@ -28,3 +29,5 @@
 > http://127.0.0.1:9000/mybatisboot/druid/index.html
 用户名:admin
 密码:123456
+
+> 支持SQL监控,Web应用监控,URI监控,Session监控

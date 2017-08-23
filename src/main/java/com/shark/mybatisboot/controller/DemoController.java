@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by tuze on 2017/8/23.
@@ -37,6 +38,13 @@ public class DemoController {
         log.debug("这是一个debug日志");
         List<String> strings = demoService.queryMemberName();
         return strings;
+    }
+
+
+    @RequestMapping("/querySqlModel")
+    public List<Map<String, Object>> querySqlModel(){
+        log.debug("这是一个querySqlModel");
+        return demoService.querySqlModel();
     }
 
 }
