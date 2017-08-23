@@ -34,6 +34,7 @@ public class DemoController {
     @RequestMapping("/queryMemberName")
     public List<String> queryMemberName(){
         log.info("查询...");
+        log.debug("这是一个debug日志");
         List<String> strings = demoService.queryMemberName();
         return strings;
     }
