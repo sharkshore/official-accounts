@@ -13,7 +13,7 @@ public class DemoController {
 
     @RequestMapping("/hello")
     public String hello(){
-        log.info("hello");
+        log.info("hello,springboot");
         return "hello,world";
     }
 
