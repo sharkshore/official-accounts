@@ -14,6 +14,18 @@
 11. 支持日志级别,日志输出 ok
 12. druid监控 ok
 13. 支持定时任务  ok
+14. 支持swagger2快速查看接口文档
+
+
+### swagger2查看接口文档地址：
+
+1. 接口详细数据
+http://localhost:9000/mybatisboot/v2/api-docs
+http://localhost:8080/v2/api-docs
+
+2. 访问界面:
+http://localhost:9000/mybatisboot/swagger-ui.html
+http://localhost:8080/swagger-ui.html
 
 
 ### 日志输出内容元素具体如下：
