@@ -21,6 +21,8 @@
 1. 下载项目后,首先修改文件夹名,再shift+f6修改模块名
 2. 修改基本包名后,记得修改BootApplication和Swagger2Config中的包名地址
 3. 如果整体加载workspace的话,记得修改spring.devtools中的监听文件路径,不然启动项目会报错
+4. 修改mybatis.type-aliases-package路径
+5. 修改日志路径
 
 
 ### swagger2查看接口文档地址：
