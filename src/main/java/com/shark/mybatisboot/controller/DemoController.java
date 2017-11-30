@@ -1,7 +1,9 @@
 package com.shark.mybatisboot.controller;
 
+import com.github.pagehelper.PageHelper;
 import com.shark.mybatisboot.biz.DemoService;
 import com.shark.mybatisboot.domain.model.Demo;
+import com.shark.mybatisboot.domain.model.PageParams;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -55,10 +57,19 @@ public class DemoController {
         return "hello,param";
     }
 
+    /**
+     * 分页查询
+     * http://localhost:9000/mybatisboot/queryMemberName?pageNum=2&pageSize=2
+     * @param pageParams
+     * @return
+     */
     @RequestMapping("/queryMemberName")
-    public List<String> queryMemberName(){
+    public List<String> queryMemberName(PageParams pageParams){
         log.info("查询...");
         log.debug("这是一个debug日志");
+        //Mybatis
+//        PageHelper.startPage(2, 2);
+        PageHelper.startPage(pageParams);
         List<String> strings = demoService.queryMemberName();
         return strings;
     }

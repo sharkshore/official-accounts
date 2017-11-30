@@ -9,7 +9,7 @@
 6. 改造配置文件,支持不同环境  ok
 7. 配置JdbcTemplate   ok
 8. 支持热部署  ok
-9. 支持API接口文档自动生成  ok
+9. 支持分页查询(Mybatis分页插件)  ok
 10. 支持单元测试  ok
 11. 支持日志级别,日志输出 ok
 12. druid监控 ok
