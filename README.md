@@ -29,11 +29,9 @@
 
 1. 接口详细数据
 http://localhost:9000/mybatisboot/v2/api-docs
-http://localhost:8080/v2/api-docs
 
 2. 访问界面:
 http://localhost:9000/mybatisboot/swagger-ui.html
-http://localhost:8080/swagger-ui.html
 
 
 ### 日志输出内容元素具体如下：
