@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class TestJob {
 
 
-    @Scheduled(cron = "0/5 * * * * ?")
+    @Scheduled(cron = "0 */1 * * * ?")
 //    @Scheduled(fixedDelay = 1000)
     public void job() {
         log.info("＝＝＝＝＝定时更新＝＝＝＝＝");
