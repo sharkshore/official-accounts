@@ -42,7 +42,6 @@ public class WebLayerTest {
         //参数示例
         // MockMvcRequestBuilders.put("/user").param("id", "3").param("name", "更新333")
 
-        //模拟测试接口,生成文档
         MockHttpServletRequestBuilder mockHttpServletRequestBuilder = post("/hello").
                 contentType(MediaType.APPLICATION_JSON_VALUE)
                 .accept(MediaType.APPLICATION_JSON_VALUE)

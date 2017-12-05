@@ -12,7 +12,7 @@ import java.util.Map;
  * Created by tuze on 2017/8/23.
  */
 @Service
-public class DemoService {
+public class DemoService implements IDemoService {
 
     @Autowired
     private DemoMapper demoMapper;
@@ -27,4 +27,5 @@ public class DemoService {
     public  List<Map<String, Object>>   querySqlModel(){
         return demoDao.querySqlModel();
     }
+
 }
