@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Bean;
@@ -24,6 +25,7 @@ import static org.mockito.Mockito.when;
  * Created by tuze on 2017/11/30.
  */
 @RunWith(SpringRunner.class)
+@SpringBootTest
 @Slf4j
 public class DemoServiceMockTest {
 

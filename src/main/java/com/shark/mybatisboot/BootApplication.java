@@ -6,9 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
-@MapperScan("com.shark.mybatisboot.dao.mapper")
-@EnableScheduling
-@ServletComponentScan
 @SpringBootApplication
 public class BootApplication {
 

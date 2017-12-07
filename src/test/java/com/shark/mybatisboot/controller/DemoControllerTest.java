@@ -68,7 +68,7 @@ public class DemoControllerTest {
     }
 
     @Test
-    public void insert() throws Exception {
+    public void helloWithRelativePath() throws Exception {
         String forObject = this.restTemplate.getForObject( "/hello", String.class);
         assertTrue(forObject.contains("hello,world"));
     }

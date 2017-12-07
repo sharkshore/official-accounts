@@ -1,6 +1,6 @@
 package com.shark.mybatisboot.controller;
 
-import com.shark.mybatisboot.biz.DemoService;
+import com.shark.mybatisboot.biz.SimpleService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,28 +11,32 @@ import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.junit.Assert.*;
+import static org.mockito.BDDMockito.given;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
- * Created by tuze on 2017/12/4.
+ * Created by tuze on 2017/12/7.
  */
 @RunWith(SpringRunner.class)
-@WebMvcTest(DemoController.class)
-public class DemoControllerWebMvcTest {
+@WebMvcTest(SimpleController.class)
+public class SimpleControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @MockBean
-    private DemoService demoService;
+    private SimpleService simpleService;
 
     @Test
     public void hello() throws Exception {
 
-        mockMvc.perform(get("/hello").contentType(MediaType.ALL))
+        given(simpleService.getName()) .willReturn("hello,shark");
+        mockMvc.perform(get("/simple").accept(MediaType.TEXT_PLAIN))
                 .andDo(print())
-                .andExpect(status().isOk());
+                .andExpect(status().isOk()).andExpect(content().string("hello,shark"));
 
     }
 
