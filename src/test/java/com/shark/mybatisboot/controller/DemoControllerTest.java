@@ -69,7 +69,8 @@ public class DemoControllerTest {
 
     @Test
     public void insert() throws Exception {
-
+        String forObject = this.restTemplate.getForObject( "/hello", String.class);
+        assertTrue(forObject.contains("hello,world"));
     }
 
     @Test

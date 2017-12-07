@@ -1,11 +1,15 @@
 package com.shark.mybatisboot.biz;
 
+import com.shark.mybatisboot.TestConfigure;
 import com.shark.mybatisboot.dao.mapper.DemoMapper;
+import com.shark.mybatisboot.domain.model.Demo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.*;
@@ -15,11 +19,16 @@ import static org.junit.Assert.*;
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@Import(TestConfigure.class)
 @Slf4j
 public class DemoServiceTest {
 
     @Autowired
     DemoMapper demoMapper;
+
+    @Autowired
+    @Qualifier("testDemo")
+    Demo demo;
 
     @Test
     public void queryMemberName() throws Exception {
@@ -28,7 +37,7 @@ public class DemoServiceTest {
 
     @Test
     public void querySqlModel() throws Exception {
-
+        log.info("{}", demo);
     }
 
 }
