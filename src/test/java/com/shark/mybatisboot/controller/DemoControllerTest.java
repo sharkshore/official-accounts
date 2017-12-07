@@ -14,6 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.*;
@@ -34,9 +35,13 @@ import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standal
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@AutoConfigureMockMvc
+@TestPropertySource(locations = "classpath:application-test.properties")
 @Slf4j
 public class DemoControllerTest {
 
+    @Autowired
+    private MockMvc mvc;
 
     @LocalServerPort
     private int port;
@@ -54,14 +59,13 @@ public class DemoControllerTest {
 /*        this.mockMvc.perform(get("/queryMemberName").accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType("application/json"));*/
-        String forObject = this.restTemplate.getForObject("http://localhost:" + port + "/mybatisboot/hello", String.class);
-        assertTrue(forObject.contains("hello,world"));
 
     }
 
     @Test
-    public void demo() throws Exception {
-
+    public void hello2() throws Exception {
+        String forObject = this.restTemplate.getForObject("http://localhost:" + port + "/mybatisboot/hello", String.class);
+        assertTrue(forObject.contains("hello,world"));
     }
 
     @Test

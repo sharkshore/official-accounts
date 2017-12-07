@@ -11,6 +11,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -37,7 +38,6 @@ public class DemoController {
         log.info("hello,springboot");
         return "hello,world";
     }
-
 
     @ApiOperation(value = "获取demo实体",notes = "必须传入实体,获得一个集合",response = Demo.class,responseContainer = "List")
     @RequestMapping(value = "/demo",method = {RequestMethod.POST})

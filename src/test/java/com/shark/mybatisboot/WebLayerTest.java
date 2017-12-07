@@ -30,7 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @RunWith(SpringRunner.class)
 @WebMvcTest(DemoController.class)
-@AutoConfigureRestDocs(outputDir = "target/snippets")
+//@AutoConfigureRestDocs(outputDir = "target/snippets")
 public class WebLayerTest {
 
     @Autowired
