@@ -27,8 +27,10 @@ import java.util.List;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.setup.MockMvcBuilders.standaloneSetup;
+import static org.junit.matchers.JUnitMatchers.containsString;
 
 /**
  * Created by tuze on 2017/12/1.
@@ -51,19 +53,16 @@ public class DemoControllerTest {
 
 
     @Test
-    public void hello() throws Exception {
-/*        List<String> list=new ArrayList<>();
-        list.add("shark");
-        list.add("shore");
-        when(demoService.queryMemberName()).thenReturn(list);*/
-/*        this.mockMvc.perform(get("/queryMemberName").accept(MediaType.parseMediaType("application/json;charset=UTF-8")))
+    public void helloWithMvc() throws Exception {
+        mvc.perform(get("/hello").contentType(MediaType.ALL))
+                .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().contentType("application/json"));*/
+                .andExpect(content().string(containsString("tuze")));
 
     }
 
     @Test
-    public void hello2() throws Exception {
+    public void helloWithRestTemplate() throws Exception {
         String forObject = this.restTemplate.getForObject("http://localhost:" + port + "/mybatisboot/hello", String.class);
         assertTrue(forObject.contains("hello,world"));
     }
