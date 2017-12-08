@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * Created by tuze on 2017/8/23.
  */
-//@RestController
+@RestController
 @Slf4j
 @Api(value = "/", description = "Demo测试", consumes="application/x-www-form-urlencoded")
 public class DemoController {
