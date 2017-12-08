@@ -1,4 +1,4 @@
-package com.shark.mybatisboot.dal.config;
+package com.shark.mybatisboot.web.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;

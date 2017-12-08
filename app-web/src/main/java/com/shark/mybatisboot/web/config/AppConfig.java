@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  */
 @EnableScheduling
 @ServletComponentScan
-@MapperScan("com.shark.mybatisboot.dao.mapper")
+@MapperScan("com.shark.mybatisboot.dal.mapper")
 @Configuration
 public class AppConfig {
 

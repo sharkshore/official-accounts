@@ -16,13 +16,19 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(value = "/", description = "Simple测试", consumes="application/x-www-form-urlencoded")
 public class SimpleController {
 
-    @Autowired
+/*    @Autowired
     private SimpleService simpleService;
 
     @RequestMapping(value = "/simple",method = RequestMethod.GET)
     public String hello(){
         log.info(simpleService.getName());
         return simpleService.getName();
+    }*/
+
+
+    @RequestMapping("/simplehello")
+    public String simplehello(){
+        return "simple,hello";
     }
 
 }

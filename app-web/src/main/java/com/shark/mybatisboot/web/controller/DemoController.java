@@ -3,8 +3,8 @@ package com.shark.mybatisboot.web.controller;
 import com.github.pagehelper.PageHelper;
 import com.shark.mybatisboot.common.model.JsrGroup;
 import com.shark.mybatisboot.dal.model.Demo;
-import com.shark.mybatisboot.service.DemoService;
 import com.shark.mybatisboot.web.model.PageParams;
+import com.shark.mybatisboot.service.DemoService;
 import com.shark.mybatisboot.web.model.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -24,7 +24,7 @@ import java.util.Map;
 /**
  * Created by tuze on 2017/8/23.
  */
-@RestController
+//@RestController
 @Slf4j
 @Api(value = "/", description = "Demo测试", consumes="application/x-www-form-urlencoded")
 public class DemoController {
