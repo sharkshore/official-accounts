@@ -1,6 +1,7 @@
 package com.shark.mybatisboot.controller;
 
-import com.shark.mybatisboot.biz.DemoService;
+import com.shark.mybatisboot.service.DemoService;
+import com.shark.mybatisboot.web.controller.DemoController;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

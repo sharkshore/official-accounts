@@ -1,24 +1,15 @@
 package com.shark.mybatisboot.common.model;
 
+/**
+ * 用于validated的分组
+ */
 public interface JsrGroup {
 
-    public interface Add {
-    }
+    interface Add { } ;
 
-    ;
+    interface Update { } ;
 
-    public interface Update {
-    }
+    interface Delete { } ;
 
-    ;
-
-    public interface Delete {
-    }
-
-    ;
-
-    public interface Get {
-    }
-
-    ;
+    interface Get { } ;
 }

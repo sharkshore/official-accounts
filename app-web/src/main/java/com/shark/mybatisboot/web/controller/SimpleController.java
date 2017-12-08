@@ -1,6 +1,6 @@
 package com.shark.mybatisboot.web.controller;
 
-import com.shark.mybatisboot.biz.SimpleService;
+import com.shark.mybatisboot.service.SimpleService;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

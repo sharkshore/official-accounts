@@ -1,11 +1,11 @@
 package com.shark.mybatisboot.web.controller;
 
 import com.github.pagehelper.PageHelper;
-import com.shark.mybatisboot.biz.DemoService;
-import com.shark.mybatisboot.domain.model.Demo;
-import com.shark.mybatisboot.domain.model.PageParams;
-import com.shark.mybatisboot.domain.validate.JsrGroup;
-import com.shark.mybatisboot.domain.vo.Result;
+import com.shark.mybatisboot.common.model.JsrGroup;
+import com.shark.mybatisboot.dal.model.Demo;
+import com.shark.mybatisboot.service.DemoService;
+import com.shark.mybatisboot.web.model.PageParams;
+import com.shark.mybatisboot.web.model.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -40,7 +40,7 @@ public class DemoController {
 
     @ApiOperation(value = "获取demo实体",notes = "必须传入实体,获得一个集合",response = Demo.class,responseContainer = "List")
     @RequestMapping(value = "/demo",method = {RequestMethod.POST})
-    public List<Demo> demo( Demo demo){
+    public List<Demo> demo(Demo demo){
         log.info("hello,springboot");
         List<Demo> demoList = new ArrayList<>();
         Demo demo1 = new Demo("小兔",22,"很帅的");

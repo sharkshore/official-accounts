@@ -1,4 +1,4 @@
-package com.shark.mybatisboot.common.enums;
+package com.shark.mybatisboot.web.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

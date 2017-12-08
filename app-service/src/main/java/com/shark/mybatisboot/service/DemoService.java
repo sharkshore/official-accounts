@@ -1,7 +1,7 @@
 package com.shark.mybatisboot.service;
 
-import com.shark.mybatisboot.dao.DemoDao;
-import com.shark.mybatisboot.dao.mapper.DemoMapper;
+import com.shark.mybatisboot.dal.dao.DemoDao;
+import com.shark.mybatisboot.dal.mapper.DemoMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

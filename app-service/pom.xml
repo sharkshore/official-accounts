@@ -14,11 +14,11 @@
     <version>${app.service.version}</version>
 
     <dependencies>
-
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>app-manager</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>

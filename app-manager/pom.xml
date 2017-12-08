@@ -14,15 +14,11 @@
     <version>${app.manager.version}</version>
 
     <dependencies>
-
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>app-common</artifactId>
-        </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>app-dal</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>

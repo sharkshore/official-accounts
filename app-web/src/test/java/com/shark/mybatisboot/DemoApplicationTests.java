@@ -1,6 +1,7 @@
 package com.shark.mybatisboot;
 
-import com.shark.mybatisboot.dao.DemoDao;
+import com.shark.mybatisboot.dal.dao.DemoDao;
+import com.shark.mybatisboot.dal.model.Demo;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -22,7 +23,7 @@ public class DemoApplicationTests {
 
     @Autowired
     @Qualifier("appleDemo")
-    Demo demo;
+	Demo demo;
 
 	@Test
 	public void contextLoads() {

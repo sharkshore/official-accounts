@@ -1,5 +1,6 @@
 package com.shark.mybatisboot;
 
+import com.shark.mybatisboot.dal.model.Demo;
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
 

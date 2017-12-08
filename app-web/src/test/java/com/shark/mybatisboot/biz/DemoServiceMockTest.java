@@ -1,7 +1,8 @@
 package com.shark.mybatisboot.biz;
 
-import com.shark.mybatisboot.dao.DemoDao;
-import com.shark.mybatisboot.dao.mapper.DemoMapper;
+import com.shark.mybatisboot.dal.dao.DemoDao;
+import com.shark.mybatisboot.dal.mapper.DemoMapper;
+import com.shark.mybatisboot.service.DemoService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.Test;
