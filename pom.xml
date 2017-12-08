@@ -6,7 +6,14 @@
     <groupId>com.shark.mybatisboot</groupId>
     <artifactId>mybatisboot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <modules>
+        <module>app-common</module>
+        <module>app-dal</module>
+        <module>app-manager</module>
+        <module>app-service</module>
+        <module>app-web</module>
+    </modules>
+    <packaging>pom</packaging>
 
     <name>demo</name>
     <description>Demo project for Spring Boot</description>
