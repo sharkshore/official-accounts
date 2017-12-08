@@ -14,6 +14,8 @@
     <version>${app.dal.version}</version>
 
     <dependencies>
+
+        <!-- 项目依赖 -->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>app-common</artifactId>
