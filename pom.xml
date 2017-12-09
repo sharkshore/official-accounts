@@ -37,6 +37,41 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+
+
+        <!--项目启动入口-->
+        <start.class>com.shark.mybatisboot.web.BootApplication</start.class>
+
+
+        <!--maven上传私服包配置-->
+        <maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
+        <java.version>1.8</java.version>
+        <java.encoding>UTF-8</java.encoding>
+        <maven.compiler.version>3.5.1</maven.compiler.version>
+        <maven.jar.version>3.0.2</maven.jar.version>
+        <!--测试类不打包-->
+        <maven.surefire.plugin.version>2.17</maven.surefire.plugin.version>
+
+        <config.version>5.0.1</config.version>
+        <spring.boot.version>1.5.6.RELEASE</spring.boot.version>
+
+        <mybatis.version>3.3.0</mybatis.version>
+        <mybatis.spring.version>1.2.2</mybatis.spring.version>
+        <HikariCP.version>2.6.3</HikariCP.version>
+        <mysql.connector.version>5.1.38</mysql.connector.version>
+
+        <redis.version>2.8.2</redis.version>
+        <redisson.version>2.0.0</redisson.version>
+
+        <lombok.version>1.16.8</lombok.version>
+        <fastjson.version>1.2.7</fastjson.version>
+        <joda.time.version>2.9.1</joda.time.version>
+        <hadoop.version>2.7.3</hadoop.version>
+        <hbase.version>1.3.0</hbase.version>
+
+
+
+
     </properties>
 
     <dependencyManagement>
@@ -101,18 +136,36 @@
             <scope>test</scope>
         </dependency>
 
-
-
     </dependencies>
 
-<!--    <build>
+    <build>
         <plugins>
+
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${java.encoding}</encoding>
+                </configuration>
             </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>${maven.jar.version}</version>
+                <configuration>
+                    <archive>
+                        <addMavenDescriptor>false</addMavenDescriptor>
+                    </archive>
+                </configuration>
+            </plugin>
+
+
         </plugins>
-    </build>-->
+    </build>
 
 
     <!--上传配置 -->

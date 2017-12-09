@@ -36,8 +36,32 @@
             <scope>test</scope>
         </dependency>
 
-
-
     </dependencies>
+
+
+    <build>
+        <plugins>
+
+
+            <!-- 改造spring-boot-maven-plugin -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>${start.class}</mainClass>
+                    <outputDirectory>${project.parent.basedir}/target</outputDirectory>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>
