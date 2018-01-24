@@ -11,11 +11,9 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +24,7 @@ import java.util.Map;
  */
 @RestController
 @Slf4j
-@Api(value = "/", description = "Demo测试", consumes="application/x-www-form-urlencoded")
+@Api(value = "/", description = "Demo测试", consumes= MediaType.APPLICATION_JSON_VALUE)
 public class DemoController {
 
     @Autowired
@@ -39,8 +37,8 @@ public class DemoController {
     }
 
     @ApiOperation(value = "获取demo实体",notes = "必须传入实体,获得一个集合",response = Demo.class,responseContainer = "List")
-    @RequestMapping(value = "/demo",method = {RequestMethod.POST})
-    public List<Demo> demo(Demo demo){
+    @RequestMapping(value = "/demo",method = {RequestMethod.POST},consumes = MediaType.APPLICATION_JSON_VALUE)
+    public List<Demo> demo(@RequestBody Demo demo){
         log.info("hello,springboot");
         List<Demo> demoList = new ArrayList<>();
         Demo demo1 = new Demo("小兔",22,"很帅的");
@@ -51,8 +49,8 @@ public class DemoController {
 
 
     @ApiOperation(value = "插入demo", notes = "插入demo", response = Result.class)
-    @RequestMapping(value = "/insert", method = {RequestMethod.POST},consumes = {"application/x-www-form-urlencoded"})
-    public Result<Demo> insert(@Validated({JsrGroup.Add.class}) Demo demo) {
+    @RequestMapping(value = "/insert", method = {RequestMethod.POST},consumes = MediaType.APPLICATION_JSON_VALUE)
+    public Result<Demo> insert(@Validated({JsrGroup.Add.class}) @RequestBody Demo demo) {
         log.info("{}", demo);
         Result<Demo> result = new Result<>(demo);
         return result;
