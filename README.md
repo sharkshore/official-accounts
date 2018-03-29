@@ -19,10 +19,11 @@
 
 
 ### 分支介绍
-1. master分支,主分支
-2. basic-mybatis分支:mybatis全部环境,提供接口
-3. multi-pom分支:Maven多模块结构
+1. master分支,主分支(multi-module:Maven多模块结构)
+2. single-module:mybatis全部环境,提供接口
 4. mvc-page分支:页面模式,可以构建网站
+
+3. multi-module:Maven多模块结构(该分支已经删除)
 
 ### 使用注意事项
 1. 下载项目后,首先修改文件夹名,再shift+f6修改模块名
@@ -30,7 +31,8 @@
 3. 修改父pom.xml中的start.class
 4. 如果整体加载workspace的话,记得修改spring.devtools中的监听文件路径,不然启动项目会报错
 5. 修改mybatis.type-aliases-package路径
-6. 修改日志路径
+6. 修改@MapperScan("")
+7. 修改日志路径
 
 
 ### swagger2查看接口文档地址：
