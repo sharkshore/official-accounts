@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.shark.mybatisboot</groupId>
-    <artifactId>mybatisboot</artifactId>
+    <groupId>com.qiongxun.officialaccounts</groupId>
+    <artifactId>official-accounts</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <modules>
         <module>app-common</module>
@@ -15,7 +15,7 @@
     </modules>
     <packaging>pom</packaging>
 
-    <name>mybatisboot</name>
+    <name>official-accounts</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -40,7 +40,7 @@
 
 
         <!--项目启动入口-->
-        <start.class>com.shark.mybatisboot.web.BootApplication</start.class>
+        <start.class>com.qiongxun.officialaccounts.web.BootApplication</start.class>
 
 
         <!--maven上传私服包配置-->
